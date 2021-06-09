@@ -188,14 +188,13 @@ export default {
 
 .last {
   margin: 5px 0 15px 18px;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 500;
-  color: rgba(95, 99, 104, 1);
 }
 
 .homework {
-  margin: 0px 18px 15px 18px;
-  font-size: 14px;
+  margin: 0px 18px 5px 18px;
+  font-size: 12px;
   color: rgba(31, 32, 35, 1);
   font-weight: 500;
   word-break: keep-all;

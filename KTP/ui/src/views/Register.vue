@@ -1,6 +1,9 @@
 <template>
   <div>
-    <el-container style="position: absolute ;right: 0px;left:0px">
+    <div class="logo" >
+      <img src="../assets/homepageimg/logo.png" width="125" alt="no logo" @click="ToMain">
+    </div>
+    <el-container style="position: absolute ;right: 0px;left:0px; " >
       <div style="margin: 0 auto">
         <el-main>
           <el-row>
@@ -153,6 +156,11 @@ export default {
     changeRole(role){
       this.role = role;
     },
+    ToMain() {
+      this.$router.push({
+        path: '/'
+      })
+    },
 
     register(){
       if(this.user.password !=this.user.rePassword){
@@ -202,6 +210,10 @@ export default {
 }
 .role-box .active {
   border: 1px solid #4285f4;
+}
+.logo{
+  padding-top: 150px;
+  padding-left: 100px;
 }
 .flex-align {
   display: flex;

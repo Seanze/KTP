@@ -20,7 +20,7 @@
 
         <el-menu-item>
           <el-button v-show="login" type="primary" plain @click="logining">登录</el-button>
-          <el-button v-show="login" type="primary" >注册</el-button>
+          <el-button v-show="login" type="primary" @click="registing">注册</el-button>
           <el-button v-show="islogin" type="primary" style="margin-top: 14px" @click="enterclass" size="mini" >进入课堂</el-button>
         </el-menu-item>
       </el-menu>
@@ -629,6 +629,12 @@ export default {
 
       this.$router.push({
         path: '/login'
+      });
+    },
+    registing(){
+
+      this.$router.push({
+        path: '/register'
       });
     },
     enterclass(){

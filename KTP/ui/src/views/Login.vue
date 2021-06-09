@@ -1,6 +1,9 @@
 <template>
   <div>
-    <el-container style="position: absolute ;right: 0px;left:0px">
+    <div class="logo" >
+      <img src="../assets/homepageimg/logo.png" width="125" alt="no logo" @click="ToMain">
+    </div>
+    <el-container style="position: absolute ;right: 0px;left:0px;">
       <div style="margin: 0 auto">
         <el-main>
           <el-row>
@@ -59,6 +62,11 @@ export default {
         this.$message.error("请输入登录信息");
       }
     },
+    ToMain() {
+      this.$router.push({
+        path: '/'
+      })
+    },
 
     ...mapActions(["loginAction"])
   }
@@ -86,6 +94,10 @@ export default {
   position: relative;
   left: -30px;
   top: 0.625rem;
+}
+.logo{
+  padding-top: 150px;
+  padding-left: 100px;
 }
 
 </style>
